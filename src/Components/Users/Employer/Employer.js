@@ -19,7 +19,7 @@ const Employer = () => {
 
     const handlePayment = (paymentId) => {
         const orderDetails = { ...loggedInUser, paymentId: paymentId, ...userInfo, orderTime: new Date() };
-        fetch('http://localhost:5000/employer', {
+        fetch('https://pacific-garden-11203.herokuapp.com/employer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

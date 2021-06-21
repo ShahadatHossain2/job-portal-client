@@ -13,14 +13,14 @@ const Application = () => {
 
     })
     useEffect(()=>{
-        fetch(`http://localhost:5000/apply/${jobId}`)
+        fetch(`https://pacific-garden-11203.herokuapp.com/apply/${jobId}`)
         .then(res=> res.json())
         .then(data => setApplication(data[0]))
     },[jobId])
 
     const handleApplication=()=>{
         const applicationInfo = {...application, ...applicantInfo}
-        fetch('http://localhost:5000/application', {
+        fetch('https://pacific-garden-11203.herokuapp.com/application', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

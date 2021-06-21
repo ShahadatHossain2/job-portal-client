@@ -3,7 +3,7 @@ import PostDetails from '../PostDetails/PostDetails';
 const PendingPost = () => {
     const [pendingPost, setPendingPost] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/pendingPost",)
+        fetch("https://pacific-garden-11203.herokuapp.com/pendingPost",)
         .then(res => res.json())
         .then(data => setPendingPost(data))
     },[])

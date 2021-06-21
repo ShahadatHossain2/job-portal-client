@@ -19,7 +19,7 @@ const Navbar = () => {
             isEmployer: false
         }
 
-        fetch("http://localhost:5000/checkAdmin?email=" + loggedInUser.email, {
+        fetch("https://pacific-garden-11203.herokuapp.com/checkAdmin?email=" + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const Navbar = () => {
                 }
             })
 
-        fetch("http://localhost:5000/checkEmployer?email=" + loggedInUser.email, {
+        fetch("https://pacific-garden-11203.herokuapp.com/checkEmployer?email=" + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ const Navbar = () => {
                     }
                 })
 
-        fetch("http://localhost:5000/checkJobSeeker?email=" + loggedInUser.email, {
+        fetch("https://pacific-garden-11203.herokuapp.com/checkJobSeeker?email=" + loggedInUser.email, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'

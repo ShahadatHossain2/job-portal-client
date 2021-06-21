@@ -6,7 +6,7 @@ const EmployerProfile = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/jobPost', {
+        fetch('https://pacific-garden-11203.herokuapp.com/jobPost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -5,7 +5,7 @@ const JobSeekerProfile = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const [profileInfo, setProfileInfo] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/checkJobSeeker?email=" + loggedInUser.email, {
+        fetch("https://pacific-garden-11203.herokuapp.com/checkJobSeeker?email=" + loggedInUser.email, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'

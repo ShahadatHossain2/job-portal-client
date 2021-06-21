@@ -16,7 +16,7 @@ const PostDetails = ({ post, needToApprove }) => {
     const history = useHistory();
 
     const handleApprove = () => {
-        fetch('http://localhost:5000/approvePost', {
+        fetch('https://pacific-garden-11203.herokuapp.com/approvePost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const PostDetails = ({ post, needToApprove }) => {
 
             });
 
-        fetch("http://localhost:5000/delete/" + post._id, {
+        fetch("https://pacific-garden-11203.herokuapp.com/delete/" + post._id, {
             method: 'DELETE',
         })
             .then(res => res.json())

@@ -9,7 +9,7 @@ const JobSeeker = () => {
     const history = useHistory();
     const onSubmit = data => {
         const detailInfo = { ...loggedInUser, ...data};
-        fetch('http://localhost:5000/jobSeeker', {
+        fetch('https://pacific-garden-11203.herokuapp.com/jobSeeker', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
